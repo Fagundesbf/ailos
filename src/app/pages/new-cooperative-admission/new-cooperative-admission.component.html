@@ -1,44 +1,47 @@
-<div style=" background-color: #E8EFF2; min-height: 696px;">
-<div class="container">
-  <div class="container_header">
-    <div class="container_header_title">
-      <h3>Informe o CPF do futuro cooperado (a)</h3>
-    </div>
-    <div class="container_header_subTitle">
-      <div>
-        <label>Se necessário você poderá duplicar uma conta existente ou pausar e retornar este cadastro futuramente.</label>
+<div style=" background-color: #E8EFF2; min-height: 510px;">
+  <div class="container">
+    <div class="container_header">
+      <div class="container_header_title">
+        <h3>Informe o CPF do futuro cooperado (a)</h3>
       </div>
-      <div>
-        <label>Digite apenas os números (sem pontos e traços).</label>
+      <div class="container_header_subTitle">
+        <div>
+          <label>Se necessário você poderá duplicar uma conta existente ou
+            pausar e retornar este cadastro futuramente.</label>
+        </div>
+        <div>
+          <label>Digite apenas os números (sem pontos e traços).</label>
+        </div>
+      </div>
+    </div>
+    <div class="container_form">
+      <form action [formGroup]="collaboratorForm" (ngSubmit)="submitForm()">
+        <div class="form_group">
+          <div>
+            <label> CPF</label>
+          </div>
+          <input name="cpf" id="cpf"
+                 type="text"
+                 formControlName="cpf"
+                 [class.is-invalid]="collaboratorForm.invalid && (collaboratorForm.dirty || collaboratorForm.touched) "
+                 mask="000.000.000-00"
+                 placeholder="000.000.000-00" />
+          <button class="button_primary" type="submit" [disabled]="collaboratorForm.invalid"> Consultar por CPF</button>
+        </div>
+      </form>
+    </div>
+    <div class="container_card">
+      <div *ngFor="let card of items; ">
+        <app-card [dataSource]="card"></app-card>
       </div>
     </div>
   </div>
-<div class="container_form">
-  <form action="" [formGroup]="collaboratorForm" (ngSubmit)="submitForm()">
-   <div class="form_group">
-    <div>
-      <label> CPF</label>
-    </div>
-
-      <input name="cpf" id="cpf" type="text" formControlName="cpf" mask="000.000.000-00" placeholder="000.000.000-00"/>
-      <button class="button_primary" type="submit" [disabled]="collaboratorForm.invalid"> Consultar por CPF</button>
-   </div>
-  </form>
-</div>
-
-<div class="container_card">
-  <div *ngFor="let card of items; ">
-    <app-card [dataSource]="card"></app-card>
-  </div>
-
-</div>
-</div>
 </div>
 <div class="container_bottons">
   <div>
     <button class="button_primary">Iniciar nova admissão </button>
   </div>
-<div>
-  <button class="button_primary_outline"> Dicas para admissão</button>
-</div>
+  <div>
+    <button class="button_primary_outline"> Dicas para admissão</button>
+  </div>
 </div>

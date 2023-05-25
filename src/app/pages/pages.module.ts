@@ -7,15 +7,9 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { NewCooperativeAdmissionComponent } from './new-cooperative-admission/new-cooperative-admission.component';
 import { CardComponent } from '../components/card/card.component';
 import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask } from 'ngx-mask';
-
-
-
-
 @NgModule({
   declarations: [
     NewCooperativeAdmissionComponent,
-
-
   ],
   imports: [
     CommonModule,

@@ -1,10 +1,9 @@
 <div class="menu_container">
   <div class="menu_logo">
-    <img src="../../../assets/logo.png" alt="Logo Ailos" name="Ailos_logo" id="Ailos_logo"  width="35" height="35">
+    <img src="../../../assets/logo.png" alt="Logo Ailos" name="Ailos_logo"
+      id="Ailos_logo" width="35" height="35">
   </div>
   <div class="menu_icon" *ngFor=" let menu of menus">
-  <span [ngClass]="menu.icon"> {{menu.name}}</span>
-
+    <span [ngClass]="menu.icon"> {{menu.name}}</span>
   </div>
-
 </div>

@@ -6,6 +6,10 @@ const routes: Routes = [
   path: 'admissao-cooperado',
   loadChildren: ()=>
    import('./pages/pages.module').then((m)=>m.PagesModule)
+ },
+ {
+  path: '**',
+  redirectTo:'admissao-cooperado'
  }
 ];
 
