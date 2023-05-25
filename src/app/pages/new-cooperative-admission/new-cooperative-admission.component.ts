@@ -13,12 +13,15 @@ export class NewCooperativeAdmissionComponent implements OnInit {
   infoCollaborators$!: Observable<any>
   items!: any;
   collaboratorForm!: FormGroup;
+  sidebarVisible: boolean = false;
+  events!: any[];
 
   constructor(
     public fb: FormBuilder
   ) { }
 
   ngOnInit(): void {
+    this.getTimeLine();
     this.createForm();
   }
 
@@ -26,6 +29,11 @@ export class NewCooperativeAdmissionComponent implements OnInit {
     this.collaboratorForm = this.fb.group({
       cpf: [null, [Validators.required]]
     })
+  }
+
+  newCollaborator(){
+    this.collaboratorForm.reset();
+    this.items = null;
   }
 
   submitForm() {
@@ -48,7 +56,7 @@ export class NewCooperativeAdmissionComponent implements OnInit {
 
         });
         this.collaboratorForm.get('cpf')?.setErrors({error: true})
-        this.items = [];
+        this.items = null;
       }
     }
   }
@@ -134,5 +142,11 @@ export class NewCooperativeAdmissionComponent implements OnInit {
         ]
       },
     ];
+  }
+
+  getTimeLine(){
+    this.events = [
+      "inicio", "Documentos", "Dados cadastrais", "Admissão"
+  ];
   }
 }

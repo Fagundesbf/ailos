@@ -20,6 +20,8 @@
     "@angular/router": "^16.0.0",
     "font-awesome": "^4.7.0",
     "ngx-mask": "^16.0.4",
+    "primeicons": "^6.0.1",
+    "primeng": "^16.0.0-rc.2",
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.7.5",
     "tslib": "^2.3.0",

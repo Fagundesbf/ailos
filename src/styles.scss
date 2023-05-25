@@ -1,3 +1,7 @@
+@import "primeicons/primeicons.css";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
 body{
   margin: 0px;
 }
@@ -78,7 +82,7 @@ button:disabled{
   input {
     width: 200px;
       border: 1px solid #787878;
-      height: 30px;
+      height: 34px;
       font-size: 16px;
       padding-left: 8px;
       border-radius: 3px;
@@ -92,4 +96,9 @@ button:disabled{
 
 .material-symbols-rounded.success{
   color: rgba(0, 244, 37, 0.964);
+}
+
+.p-timeline .p-timeline-event-marker {
+    border: 2px solid #165c7d !important;
+    background-color:  #E8EFF2 !important;
 }

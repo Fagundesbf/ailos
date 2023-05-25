@@ -1,4 +1,14 @@
 <div style=" background-color: #E8EFF2; min-height: 510px;">
+  <div style="margin: 0px 28% 0px;">
+    <div class="card">
+      <p-timeline [value]="events" layout="horizontal">
+          <ng-template pTemplate="content" let-event>
+              {{ event }}
+          </ng-template>
+      </p-timeline>
+  </div>
+
+  </div>
   <div class="container">
     <div class="container_header">
       <div class="container_header_title">
@@ -38,10 +48,18 @@
   </div>
 </div>
 <div class="container_bottons">
-  <div>
-    <button class="button_primary">Iniciar nova admissão </button>
+  <div *ngIf="items || null ">
+    <button class="button_primary" (click)="newCollaborator()">Iniciar nova admissão </button>
   </div>
   <div>
-    <button class="button_primary_outline"> Dicas para admissão</button>
+    <button class="button_primary_outline" (click)="sidebarVisible = true" icon="pi pi-arrow-right"> Dicas para admissão</button>
   </div>
+</div>
+<div class="card flex justify-content-center">
+  <p-sidebar [(visible)]="sidebarVisible" styleClass="w-30rem" position="right">
+      <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+  </p-sidebar>
 </div>
