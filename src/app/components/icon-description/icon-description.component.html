@@ -1,0 +1,21 @@
+<div  *ngFor="let item of data">
+  <div class="icon_description">
+    <div class="icon">
+        <span [ngClass]="item.icon"> {{item.name}}</span>
+    </div>
+    <div class="span_label">
+      <div>
+        <label>{{item.span}}</label>
+      </div>
+      <div>
+        <span>{{item.label}}</span>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="item.account">
+    <div class="account">
+      <label> Duplicar conta</label>
+
+    </div>
+ </div>
+</div>

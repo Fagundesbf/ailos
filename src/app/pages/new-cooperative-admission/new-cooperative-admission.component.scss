@@ -1,0 +1,25 @@
+.container{
+  margin: 0px 13px;
+  padding-top: 2px;
+  .container_header_subTitle{
+    position: relative;
+    bottom: 16px;
+  }
+  .container_form{
+    display: flex;
+  }
+  .container_card{
+    margin-top: 25px;
+    display: grid;
+    gap: 38px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+.container_bottons{
+  display: flex;
+  margin: 12px;
+  gap: 9px;
+
+}
+

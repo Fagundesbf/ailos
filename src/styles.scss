@@ -1,0 +1,92 @@
+body{
+  margin: 0px;
+}
+
+// FONT'S
+
+@font-face {
+  font-family: OpenSans;
+  src: url(./assets/fonts/OpenSans/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto-bold;
+  src: url(./assets/fonts/Roboto/Roboto-Bold.ttf);
+}
+
+h1,h2,h5{
+  font-family: Roboto-bold;
+  font-weight: 700;
+}
+
+h3,h4s{
+  font-family: 'Roboto';
+
+}
+label{
+  color: #787878;
+  font-family: 'Roboto';
+  font-size: 14px;
+}
+
+.button_outline_header{
+    border: 1px solid #125D79;
+    border-radius: 40px;
+    color:#125D79;
+    width: 81px;
+    background: white;
+    height: 30px;
+    font-family: Roboto-bold;
+  font-weight: 700;
+
+}
+
+.button_primary {
+
+    border-radius: 2px;
+    background-color: #125D79;
+    height: 34px;
+    border: 9px solid #125D79;
+    color: white;
+
+}
+
+.button_primary_outline{
+  border-radius: 2px;
+  background-color: #fff;
+  height: 34px;
+  border: 1px solid #125D79;
+  color: #125D79;
+}
+
+button:disabled{
+  background-color: #66a0b5;
+  border: 9px solid #66a0b5;
+}
+
+.form_group{
+  label{
+    color: black;
+    font-family: 'Roboto';
+  }
+  input {
+    width: 200px;
+      border: 1px solid #787878;
+      height: 30px;
+      font-size: 16px;
+      padding-left: 8px;
+      border-radius: 3px;
+      margin-right: 10px;
+  }
+
+  input:active{
+    border: 1px solid #125D79;
+  }
+}
+
+.material-symbols-rounded.success{
+  color: rgba(0, 244, 37, 0.964);
+}

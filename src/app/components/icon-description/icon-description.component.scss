@@ -1,0 +1,22 @@
+.icon_description{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .icon{
+    width: 50px;
+  }
+  .span_label{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+}
+.account{
+  margin-bottom: 15px;
+  margin-top: 13px;
+  label{
+    color: #125D79;
+  }
+}
